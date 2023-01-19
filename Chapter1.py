@@ -45,7 +45,7 @@ class LogicGate:
         return self.label
     
     def getOutput (self):
-        self.output = self.performGateLogic ()
+        self.output = self.performGateLogic ()# type: ignore
         return self.output
 
 class BinaryGate(LogicGate):
