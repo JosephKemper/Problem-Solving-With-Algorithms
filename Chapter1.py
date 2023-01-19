@@ -48,7 +48,22 @@ class LogicGate:
         self.output = self.performGateLogic ()
         return self.output
 
-        
+class BinaryGate(LogicGate):
+    def __init__(self, n):
+        super().__init__(n)
+
+        self.pinA = None
+        self.pinB = None
+    
+    def getPinA (self):
+        return int (input("Enter Pin A Input for gate " +\
+            self.getLabel()+ "-->"))
+    
+    def getPinB (self):
+        return int (input("Enter Pin B Input for gate " +\
+            self.getLabel()+ "-->"))
+
+
 
 myFraction = Fraction(3,5)
 
