@@ -56,11 +56,22 @@ class BinaryGate(LogicGate):
         self.pinB = None
     
     def getPinA (self):
-        return int (input("Enter Pin A Input for gate " +\
+        return int (input("Enter Pin A input for gate " +\
             self.getLabel()+ "-->"))
     
     def getPinB (self):
-        return int (input("Enter Pin B Input for gate " +\
+        return int (input("Enter Pin B input for gate " +\
+            self.getLabel()+ "-->"))
+
+class UnaryGate (LogicGate):
+
+    def __init__(self, n):
+        super().__init__(n)
+
+        self.pin = None
+    
+    def getPin (self):
+        return int (input("Enter Pin input for gate " +\
             self.getLabel()+ "-->"))
 
 
